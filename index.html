@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mahishah Digital Studio — freelance data entry, document formatting and presentation support.">
+  <title>Mahishah Digital Studio</title>
+  <style>
+    :root {
+      --ink: #24143b;
+      --muted: #6f647c;
+      --purple: #6d42a6;
+      --pink: #e9a4d1;
+      --pale: #fbf5ff;
+      --line: #eadff2;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #fffaff 0%, #fff 58%, #faf5ff 100%);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1100px, 92%); margin: auto; }
+    header { padding: 22px 0; }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 800; letter-spacing: -.4px; font-size: 1.1rem; }
+    .brand span { color: var(--purple); }
+    .navlinks { display: flex; gap: 22px; color: var(--muted); font-size: .93rem; }
+    .navlinks a:hover { color: var(--purple); }
+    .hero {
+      padding: 78px 0 68px; display: grid; grid-template-columns: 1.3fr .7fr;
+      gap: 48px; align-items: center;
+    }
+    .eyebrow { color: var(--purple); font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; font-size: .75rem; }
+    h1 { font-size: clamp(2.7rem, 6vw, 4.8rem); line-height: 1.04; letter-spacing: -2px; margin: 14px 0 20px; }
+    h1 span { color: var(--purple); }
+    .lead { max-width: 590px; color: var(--muted); font-size: 1.12rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 28px; }
+    .btn { display: inline-block; padding: 12px 21px; border-radius: 999px; font-weight: 700; border: 1px solid var(--purple); }
+    .primary { background: var(--purple); color: white; }
+    .secondary { color: var(--purple); background: white; }
+    .hero-card {
+      min-height: 300px; border-radius: 28px; padding: 30px;
+      background: radial-gradient(circle at 85% 12%, #f9d5eb 0, transparent 34%),
+                  linear-gradient(145deg, #f3e8ff, #fff0f8);
+      display: flex; flex-direction: column; justify-content: center;
+      box-shadow: 0 20px 55px rgba(84, 48, 116, .10);
+    }
+    .monogram {
+      width: 92px; height: 92px; display: grid; place-items: center;
+      border-radius: 28px; background: white; color: var(--purple);
+      font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(84, 48, 116, .10);
+    }
+    .hero-card strong { font-size: 1.35rem; }
+    .hero-card p { color: var(--muted); margin-bottom: 0; }
+    section { padding: 58px 0; }
+    .section-head { max-width: 650px; margin-bottom: 28px; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.15; margin: 8px 0 12px; letter-spacing: -.7px; }
+    .section-head p, .about p { color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card {
+      background: white; border: 1px solid var(--line); border-radius: 20px;
+      padding: 24px; box-shadow: 0 10px 30px rgba(48, 27, 67, .04);
+    }
+    .icon { font-size: 1.6rem; }
+    .card h3 { margin: 12px 0 7px; }
+    .card p { color: var(--muted); margin: 0; font-size: .95rem; }
+    .about-box {
+      background: var(--pale); border: 1px solid var(--line); border-radius: 24px;
+      padding: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+    }
+    .skill { margin: 15px 0; }
+    .skill-top { display: flex; justify-content: space-between; gap: 10px; font-weight: 650; font-size: .94rem; }
+    .track { height: 8px; background: #eadff2; border-radius: 99px; margin-top: 8px; overflow: hidden; }
+    .fill { height: 100%; width: 70%; border-radius: inherit; background: linear-gradient(90deg, var(--purple), var(--pink)); }
+    .note { font-size: .85rem; color: var(--muted); }
+    .contact {
+      background: linear-gradient(130deg, #321b50, #67409a); color: white;
+      border-radius: 28px; padding: 38px; display: flex; justify-content: space-between;
+      align-items: center; gap: 24px;
+    }
+    .contact p { color: #eadff5; margin-bottom: 0; }
+    .contact .btn { background: white; color: var(--purple); border-color: white; white-space: nowrap; }
+    footer { padding: 28px 0 38px; text-align: center; color: var(--muted); font-size: .88rem; }
+    @media (max-width: 760px) {
+      .navlinks { gap: 12px; font-size: .82rem; flex-wrap: wrap; justify-content: flex-end; }
+      .hero { grid-template-columns: 1fr; padding-top: 48px; gap: 28px; }
+      .grid { grid-template-columns: 1fr; }
+      .about-box { grid-template-columns: 1fr; }
+      .contact { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav>
+      <a class="brand" href="#home">Mahishah <span>Digital Studio</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#services">Services</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow">Welcome to my digital space</div>
+        <h1>Creative support for your <span>digital work.</span></h1>
+        <p class="lead">Hi, I'm Mahishah. I’m building my freelance skills and offering careful support with data entry, document formatting and presentation design.</p>
+        <div class="actions">
+          <a class="btn primary" href="#services">Explore services</a>
+          <a class="btn secondary" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <div class="monogram">M</div>
+        <strong>Mahishah Digital Studio</strong>
+        <p>Organised work. Clear communication. Creative ideas.</p>
+      </aside>
+    </div>
+
+    <section class="wrap about" id="about">
+      <div class="section-head">
+        <div class="eyebrow">A little about me</div>
+        <h2>Making everyday digital tasks simpler.</h2>
+        <p>I’m developing my skills in office tools and online work. I value accuracy, neat presentation and learning something new with every project.</p>
+      </div>
+      <div class="about-box">
+        <div>
+          <h3>My approach</h3>
+          <p>I aim to understand each task clearly, keep information organised and deliver work in a clean, easy-to-use format.</p>
+          <p class="note">This is an introductory portfolio. Add real project examples here as you complete them.</p>
+        </div>
+        <div id="skills">
+          <h3>My skills</h3>
+          <div class="skill"><div class="skill-top"><span>MS Word</span><span>Learning & practice</span></div><div class="track"><div class="fill" style="width:78%"></div></div></div>
+          <div class="skill"><div class="skill-top"><span>Data Entry</span><span>Learning & practice</span></div><div class="track"><div class="fill" style="width:72%"></div></div></div>
+          <div class="skill"><div class="skill-top"><span>PowerPoint</span><span>Learning & practice</span></div><div class="track"><div class="fill" style="width:75%"></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="services">
+      <div class="section-head">
+        <div class="eyebrow">What I can help with</div>
+        <h2>Services</h2>
+        <p>These are starter service descriptions. Keep only the services you can confidently complete.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="icon">⌨️</div><h3>Data Entry</h3><p>Entering and organising information in spreadsheets and documents with care.</p></article>
+        <article class="card"><div class="icon">📄</div><h3>MS Word</h3><p>Typing, document formatting and arranging content into a neat layout.</p></article>
+        <article class="card"><div class="icon">📊</div><h3>PowerPoint</h3><p>Creating clear, well-organised slides for simple presentations.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="portfolio">
+      <div class="section-head">
+        <div class="eyebrow">My work</div>
+        <h2>Portfolio</h2>
+        <p>Project samples will appear here as they are ready. Add screenshots or sample files only when they contain no private information.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="icon">📁</div><h3>Document Sample</h3><p>Coming soon — a sample Word document.</p></article>
+        <article class="card"><div class="icon">📋</div><h3>Spreadsheet Sample</h3><p>Coming soon — a sample data-entry spreadsheet.</p></article>
+        <article class="card"><div class="icon">✨</div><h3>Presentation Sample</h3><p>Coming soon — a sample PowerPoint presentation.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="contact">
+      <div class="contact">
+        <div><div class="eyebrow" style="color:#f4c7e5">Let's connect</div><h2>Have a project in mind?</h2><p>Contact details can be added here when you are ready to share them safely.</p></div>
+        <a class="btn" href="mailto:YOUR_EMAIL@example.com?subject=Freelance%20enquiry">Add your email first</a>
+      </div>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> Mahishah Digital Studio · Personal portfolio</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
